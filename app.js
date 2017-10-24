@@ -30,5 +30,12 @@ function writeFile(req, res){
     })
 }
 
+var util = require("util");
+var business = "vjh";
+var population = 5899;
+var mid = util.format('%s business has %d employees', business, population); 
+util.log(mid);
+
+
 app.use(logit).use(staticMiddleware).listen(3333);
 console.log("static web server started on port 3333");
